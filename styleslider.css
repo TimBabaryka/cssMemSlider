@@ -1,0 +1,165 @@
+ body{
+	background: linear-gradient(
+		149deg,
+		rgb(71, 56, 206) 0%,
+		rgb(240, 241, 241) 100%
+	  );
+ }
+ 
+ #slider {
+	max-height: 100vh;
+    height: 100%;
+	margin: 0 auto;
+	width: 40vw;
+	max-width: 100%;
+	text-align: center;
+	background: linear-gradient(
+    149deg,
+    rgb(250, 0, 0) 0%,
+    rgb(255, 255, 255) 100%
+  );
+ }
+
+
+ #slider input[type=radio] {
+	display: none;
+ }
+ #slider label {
+	cursor:pointer;
+	text-decoration: none;
+ }
+ #slides {
+	width: 45vw;
+	height: 75vh;
+	padding: 10px;
+	border: 3px solid #ccc;
+	background: #fff;
+	position: relative;
+	z-index: 1;
+ }
+ #overflow {
+	width: 100%;
+	overflow: hidden;
+ }
+ #slide1:checked ~ #slides .inner {
+	
+	margin-left: 0;
+ }
+ #slide2:checked ~ #slides .inner {
+	margin-left: -100%;
+ }
+ #slide3:checked ~ #slides .inner {
+	margin-left: -200%;
+ }
+ #slide4:checked ~ #slides .inner {
+	margin-left: -300%;
+ }
+ #slides .inner {
+	transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+	width: 400%;
+	line-height: 0;
+	height: 100%;
+	
+ }
+ #slides .slide {
+	width: 25%;
+	float:left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 75vh;
+	
+	color: #fff;
+ }
+ #slides .slide_1 {
+	background-image: url(./img/1.jpg);
+	background-size: cover;
+
+ }
+ #slides .slide_2 {
+	background-image: url(./img/2.jpg);
+	background-size: cover;
+ }
+ #slides .slide_3 {
+	background-image: url(./img/3.jpg);
+	background-size: cover;
+ }
+ #slides .slide_4 {
+	background-image: url(./img/4.jpg);
+	background-size: cover;
+ }
+
+
+ 
+
+
+ 
+ #end {
+	margin: 10px ;
+	text-align: center;
+	display: flex;
+    justify-content: end;
+ }
+ #end label {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius:100%;
+	background: #ccc;
+	margin: 0 10px;
+ }
+
+
+
+
+ #end:checked {
+display: block;
+ }
+
+ #slide1:checked ~ #end label:nth-child(1),
+ #slide2:checked ~ #end label:nth-child(2),
+ #slide3:checked ~ #end label:nth-child(3),
+ #slide4:checked ~ #end label:nth-child(4) {
+	background: #444;
+ } 
+
+p{
+	font-size: 0;
+	transition: 2s;
+}
+
+
+ #slide1:checked ~ .text1 {
+	display: block;
+	font-size: 16px;
+ }
+ #slide2:checked ~ .text2 {
+	display: block;
+	font-size: 16px;
+ }
+ #slide3:checked ~ .text3 {
+	display: block;
+	font-size: 16px;
+ }
+ #slide4:checked ~ .text4 {
+	display: block;
+	font-size: 16px;
+ }
+
+
+ .pos{
+	 position: relative;
+	 top: 366px;
+	 left: -370px;
+ }
+
+
+ /* @media screen and (max-width: 820px) {
+
+	.cssslider img {
+		height: 80vh;
+		width: 65vw;
+	}	
+	
+} */
+
