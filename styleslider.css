@@ -33,7 +33,7 @@
  #slides {
 	width: 55vw;
 	height: 78vh;
-	padding: 10px;
+	padding: 14px;
 	border: 3px solid #ccc;
 	background: #fff;
 	position: relative;
@@ -119,6 +119,13 @@
  }
 
 
+label:hover{
+	
+	background-color: wheat;
+	transition: 0.5
+	s ease-in-out;
+}
+
 
 
  .end:checked {
@@ -133,14 +140,18 @@ display: block;
 	transition: 1s ease-in-out;
  } 
 
-
- .end label:hover{
-	 color: rgb(255, 255, 255);
-	 transition: 2s;
+ .after {
+	 height: 100px;
  }
 
+ 
+
+
+
+
+
 p {
-    
+    width: 0;
 	font-size: 0;
 	transition: 2s;
 	color: rgb(243, 227, 227);
@@ -171,29 +182,21 @@ p {
 
 
 
- #slide1:checked ~ .text1 {
+ #slide1:checked ~ .text1,
+ #slide2:checked ~ .text2,
+ #slide3:checked ~ .text3,
+ #slide4:checked ~ .text4{
 	display: block;
-	font-size: 16px;	
+	width: 100%;	
+	font-size: 16px;
+	
  }
 
- #slide2:checked ~ .text2 {
-	display: block;
-	font-size: 16px;
- }
 
- #slide3:checked ~ .text3 {
-	display: block;
-	font-size: 16px;
- }
-
- #slide4:checked ~ .text4 {
-	display: block;
-	font-size: 16px;
- }
 
  .pos{	 
 	 position: relative;
-	 top: 1119px;
+	 top: 1136px;
     left: -449px;;
  }
 
@@ -234,25 +237,27 @@ p {
 	.pos{
 	 
 		position: relative;
-		top: 1138px;
+		top: 329px;
 		left: -425px;
 	}
 
+	
+
 	#slides .slide_1 {
-		height: 14rem;
+		height: 11rem;
 	}
 	#slides .slide_2 {
-		height: 12rem;
+		height: 11rem;
 	}
 	#slides .slide_3 {
-		height: 13rem;
+		height: 11rem;
 	}
 	#slides .slide_4 {
-		height: 13rem;
+		height: 11rem;
 	}
 
 	#slides {
-		height: 36vh;
+		height: 27vh;
 	}
 
 	#slides .inner {
@@ -262,7 +267,7 @@ p {
 	.overline {
 		width: 100%;
 		overflow: hidden;
-		height: 14rem;
+		height: 11rem;
 	}
 
 
@@ -273,11 +278,13 @@ p {
 
 	.pos {
 		position: relative;
-		top:317px;
-    	left: -62px;
+		top: 270px;
+		left: -30px;
 	}
 	
-
+#slides {
+	padding: 8px;
+}
 
 	#slide1:checked ~ .text1 {
 		display: block;
@@ -299,6 +306,7 @@ p {
 
 	 .box {
 		 width: 62vw;
+		 height: 60%;
 	 }
 	
 	
