@@ -4,6 +4,7 @@
 		rgb(71, 56, 206) 0%,
 		rgb(240, 241, 241) 100%
 	  );
+	  height: 90vh;
  }
  
  .box {
@@ -31,7 +32,7 @@
  }
  #slides {
 	width: 55vw;
-	height: 86vh;
+	height: 78vh;
 	padding: 10px;
 	border: 3px solid #ccc;
 	background: #fff;
@@ -129,16 +130,45 @@ display: block;
  #slide3:checked ~ .end label:nth-child(3),
  #slide4:checked ~ .end label:nth-child(4) {
 	background: rgb(250, 1, 1);
-	transition: 1s;
+	transition: 1s ease-in-out;
  } 
 
-p{
-	
+
+ .end label:hover{
+	 color: rgb(255, 255, 255);
+	 transition: 2s;
+ }
+
+p {
+    
 	font-size: 0;
 	transition: 2s;
-	color: rgb(0, 0, 0);
+	color: rgb(243, 227, 227);
+	text-align: center;
+	color: rgb(245, 245, 245);
+	letter-spacing: 2px;
+	font-weight: 500;
+	text-transform: uppercase;
+	animation: blur .75s ease-out infinite;
+	text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
+  }
+  
+  @keyframes blur {
+	from {
+	  text-shadow:2px 0px 10px rgb(255, 255, 255),
+		0px 0px 11px #fff, 
+		0px 0px 24px #fff,
+		0px 0px 26px #fff,
+		3px -10px 100px #7B96B8,
+		4px -10px 100px #7B96B8;
+	}
+  }
 
-}
+
+
+
+
+
 
 
  #slide1:checked ~ .text1 {
@@ -163,11 +193,41 @@ p{
 
  .pos{	 
 	 position: relative;
-	 top: 1138px;
-	 left: -425px;
+	 top: 1119px;
+    left: -449px;;
  }
 
  
+ @media screen and (max-width: 1440px) {
+	#slides .inner {
+		height: 79%;
+	}
+
+	.overline{
+		height: 52rem;
+	}
+
+
+	#slides .slide_1 {
+		height: 52rem;
+	}
+	#slides .slide_2 {
+		height: 48rem;
+	}
+	#slides .slide_3 {
+		height: 50rem;
+	}
+	#slides .slide_4 {
+		height: 50rem;
+	}
+
+
+	.pos {
+		position: relative;
+		top: 898px;
+    	left: -340px;
+	}
+ }
 
 
  @media screen and (max-width: 1200px) {
@@ -213,8 +273,8 @@ p{
 
 	.pos {
 		position: relative;
-		top:294px;
-        left: -65px;
+		top:317px;
+    	left: -62px;
 	}
 	
 
